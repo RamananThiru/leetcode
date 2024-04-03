@@ -6,6 +6,8 @@
 # Description - Sort a stack using recursion
 # Use a temp list to achieve , stack cannot be sorted by just using the parent stack list
 
+# This solves only this case and other edge cases fails. Just to keep track of the solutions i wrote
+
 stack = [4,3,6,5,1,2]
 temp = []
 
