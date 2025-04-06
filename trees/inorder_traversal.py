@@ -32,6 +32,35 @@ class Solution:
 
         return result
 
+# iterative solution 
+
+"""
+This solution is more intuitive and easier to follow , so revise this.
+- traverse till the left most element 
+- once left most element is added to result , go to middle
+- once middle (aka root) is added , go to right
+"""
+
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if root is None:
+            return []
+        
+        stack = []
+        result = []
+        current = root
+
+        while stack or current:
+            while current:
+                stack.append(current)
+                current = current.left
+            
+            current = stack.pop() # last non - None left element
+            result.append(current.val)
+            current = current.right
+        
+        return result
+
 
 
 
